@@ -8,6 +8,7 @@ import {
   Activity,
   HeartPulse,
   Sparkles,
+  Award,
 } from 'lucide-react';
 import {
   CLINIC_INFO,
@@ -58,14 +59,14 @@ export const EmagrecimentoPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-brand-navy/35" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-navy/80 backdrop-blur-sm px-3.5 py-1.5 text-[11px] font-bold tracking-wider text-brand-gold-light uppercase">
               <Sparkles className="h-3.5 w-3.5 text-brand-gold-bright" />
               {HERO_DATA.eyebrow}
             </span>
 
-            <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl sm:leading-[1.12]">
+            <h1 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-white sm:text-[42px] sm:leading-[1.15]">
               {HERO_DATA.headline}
             </h1>
 
@@ -77,16 +78,45 @@ export const EmagrecimentoPage: React.FC = () => {
               {HERO_DATA.quote}
             </blockquote>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-8">
               <WhatsAppCTA
                 label="Quero saber como funciona o programa"
                 location="hero_primary"
                 variant="gold"
               />
-              <div className="flex items-center gap-2 text-xs text-slate-300 sm:pl-2">
+              <div className="mt-3 flex items-center gap-2 text-xs text-slate-300">
                 <ShieldCheck className="h-4 w-4 text-brand-gold-bright shrink-0" />
-                <span>Atendimento direto com nossa equipe no WhatsApp</span>
+                <span>
+                  Tire dúvidas sobre horários em BH, atendimento online e condições do programa com nossa equipe.
+                </span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Faixa de Autoridade Imediata logo abaixo da Hero */}
+      <section className="bg-brand-navy-dark border-y border-brand-gold/20 text-white">
+        <div className="mx-auto grid max-w-6xl gap-4 px-4 py-5 sm:grid-cols-3 sm:px-6">
+          <div className="flex items-center gap-3">
+            <Award className="h-5 w-5 text-brand-gold-bright shrink-0" />
+            <div>
+              <p className="text-xs font-bold text-white">+25 anos de experiência médica</p>
+              <p className="text-[11px] text-slate-300">Cardiologia, UTI e Medicina Esportiva</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <Activity className="h-5 w-5 text-brand-gold-bright shrink-0" />
+            <div>
+              <p className="text-xs font-bold text-white">Bioimpedância e Exames Inclusos</p>
+              <p className="text-[11px] text-slate-300">Foco real em perda de gordura e massa magra</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <HeartPulse className="h-5 w-5 text-brand-gold-bright shrink-0" />
+            <div>
+              <p className="text-xs font-bold text-white">Nutrição + Suporte Emocional</p>
+              <p className="text-[11px] text-slate-300">Sono, ansiedade e dieta anti-inflamatória</p>
             </div>
           </div>
         </div>
@@ -242,17 +272,20 @@ export const EmagrecimentoPage: React.FC = () => {
             ))}
           </div>
 
-          <div className="mt-10 flex justify-center">
+          <div className="mt-10 flex flex-col items-center text-center">
             <WhatsAppCTA
               label="Conversar com nossa equipe sobre o meu caso"
               location="after_phases"
               variant="navy"
             />
+            <p className="mt-2.5 text-xs text-brand-slate">
+              Atendimento acolhedor para entender seus objetivos e explicar formatos e datas disponíveis.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Dobra 4: Comparativo e O que está incluso */}
+      {/* Dobra 4: Comparativo (Cards no Mobile, Tabela no Desktop) + Entregáveis */}
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-2xl">
@@ -264,8 +297,35 @@ export const EmagrecimentoPage: React.FC = () => {
             </h2>
           </div>
 
-          <div className="mt-8 overflow-x-auto rounded-2xl border border-brand-surface shadow-sm">
-            <table className="w-full min-w-[640px] text-left text-sm">
+          {/* Versão Mobile: Cards empilhados sem rolagem horizontal */}
+          <div className="mt-8 space-y-4 md:hidden">
+            {COMPARISON_ROWS.map((row, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border border-brand-surface bg-white p-5 shadow-sm"
+              >
+                <p className="text-sm font-bold text-brand-navy">{row.aspect}</p>
+                <div className="mt-3 rounded-xl bg-slate-50 p-3 border border-brand-surface">
+                  <span className="text-[10px] font-bold tracking-wider text-brand-slate uppercase">
+                    Dietas Restritivas Comuns
+                  </span>
+                  <p className="mt-1 text-xs leading-relaxed text-brand-slate">{row.traditional}</p>
+                </div>
+                <div className="mt-2.5 rounded-xl bg-brand-navy/5 p-3 border border-brand-navy/15">
+                  <span className="text-[10px] font-bold tracking-wider text-brand-navy uppercase">
+                    Emagrecimento Consciente
+                  </span>
+                  <p className="mt-1 text-xs font-medium leading-relaxed text-brand-navy">
+                    {row.conscious}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Versão Desktop: Tabela comparativa */}
+          <div className="mt-8 hidden md:block overflow-hidden rounded-2xl border border-brand-surface shadow-sm">
+            <table className="w-full text-left text-sm">
               <thead>
                 <tr className="bg-brand-navy text-white">
                   <th className="px-5 py-4 font-bold">Aspecto do Tratamento</th>
@@ -318,7 +378,7 @@ export const EmagrecimentoPage: React.FC = () => {
               <div className="overflow-hidden rounded-2xl border border-brand-gold/30 shadow-2xl">
                 <img
                   src="/brand/dr-cristiano-editorial.jpg"
-                  alt="Dr. Cristiano Miranda em seu consultório"
+                  alt="Dr. Cristiano Miranda com estetoscópio"
                   className="aspect-[4/5] w-full object-cover object-top"
                 />
               </div>
@@ -374,12 +434,16 @@ export const EmagrecimentoPage: React.FC = () => {
                   </div>
                 </div>
 
-                <WhatsAppCTA
-                  label="Falar com a equipe no WhatsApp"
-                  location="authority_card"
-                  variant="gold"
-                  className="shrink-0"
-                />
+                <div className="shrink-0">
+                  <WhatsAppCTA
+                    label="Falar com a equipe no WhatsApp"
+                    location="authority_card"
+                    variant="gold"
+                  />
+                  <p className="mt-2 text-center text-[11px] text-slate-300">
+                    Resposta rápida para dúvidas e agendamento
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -443,7 +507,7 @@ export const EmagrecimentoPage: React.FC = () => {
       {/* Barra fixa mobile para conversão em 1 toque */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-brand-surface bg-white/95 p-3 backdrop-blur sm:hidden">
         <WhatsAppCTA
-          label="Falar no WhatsApp"
+          label="Falar com a equipe no WhatsApp"
           location="mobile_sticky_bar"
           variant="gold"
           fullWidth

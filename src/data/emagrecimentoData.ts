@@ -42,19 +42,20 @@ export const CLINIC_INFO = {
 
 export const HERO_DATA = {
   eyebrow: 'PROGRAMA EXCLUSIVO DE SAÚDE INTEGRAL E LONGEVIDADE',
-  headline: 'Programa de Emagrecimento Consciente',
+  headline:
+    'Programa de Emagrecimento Consciente: elimine gordura preservando massa muscular, sem efeito sanfona.',
   subheadline:
-    'Emagreça com segurança médica, preservando sua massa muscular e sem efeito sanfona. Uma abordagem que une Cardiologia Esportiva, Medicina Funcional Integrativa, Bioimpedância e Nutrição — presencial na Savassi (BH) ou online.',
+    'Uma abordagem médica que une Cardiologia Esportiva, Medicina Funcional Integrativa, Bioimpedância e Nutrição para investigar a causa real do sobrepeso — presencial em BH ou online.',
   quote:
     '“Não é só sobre emagrecer, é sobre fazer as pazes com seu corpo, sua saúde e ter um plano que funciona de verdade.”',
   ctaLabel: 'Falar com a equipe no WhatsApp',
 };
 
 export const TARGET_AUDIENCE: string[] = [
-  'Para quem já tentou de tudo e se frustrou com o ciclo contínuo de restrição severa e efeito sanfona.',
-  'Para quem busca segurança médica, com acompanhamento clínico, laboratorial e cardiológico de alto padrão.',
-  'Para quem quer saúde e vitalidade, mantendo a massa muscular, melhorando a energia e equilibrando o sono.',
-  'Para quem deseja longevidade, com um plano em três fases que acompanha da perda à estabilização definitiva.',
+  'Para quem já tentou dietas restritivas ou medicações e acabou sofrendo com o reganho de peso (efeito sanfona).',
+  'Para quem sente o metabolismo lento ou cansaço constante e busca investigar causas hormonais, inflamatórias e do sono.',
+  'Para quem quer segurança cardiológica e orientação médica para treinar preservando ou ganhando massa magra.',
+  'Para quem deseja resultados sustentáveis, com um plano médico em 3 fases que acompanha da perda à estabilização.',
 ];
 
 export const PILLARS: Pillar[] = [
