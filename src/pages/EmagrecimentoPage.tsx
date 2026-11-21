@@ -32,7 +32,7 @@ export const EmagrecimentoPage: React.FC = () => {
       <header className="bg-brand-navy border-b border-white/10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <img
-            src="/brand/logo-negativo-dourado.png"
+            src="/brand/logo-facelift-branco.png"
             alt="Dr. Cristiano Miranda"
             className="h-10 w-auto object-contain sm:h-12"
           />
