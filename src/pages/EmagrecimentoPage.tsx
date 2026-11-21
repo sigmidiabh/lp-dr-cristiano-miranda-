@@ -34,7 +34,7 @@ export const EmagrecimentoPage: React.FC = () => {
           <img
             src="/brand/logo-facelift-branco.png"
             alt="Dr. Cristiano Miranda"
-            className="h-10 w-auto object-contain sm:h-12"
+            className="h-5 w-auto max-w-[200px] object-contain sm:h-7 sm:max-w-[290px]"
           />
           <div className="text-right">
             <p className="text-xs font-medium text-brand-gold-light sm:text-sm">
