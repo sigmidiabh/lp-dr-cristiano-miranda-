@@ -22,6 +22,7 @@ import {
   TARGET_AUDIENCE,
 } from '../data/emagrecimentoData';
 import { WhatsAppCTA } from '../components/WhatsAppCTA';
+import { BioimpedanceChart } from '../components/BioimpedanceChart';
 
 export const EmagrecimentoPage: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -204,6 +205,7 @@ export const EmagrecimentoPage: React.FC = () => {
                 elimine gordura preservando a musculatura ativa — evitando a queda metabólica típica
                 de dietas restritivas.
               </p>
+              <BioimpedanceChart />
             </div>
           </div>
         </div>
