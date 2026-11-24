@@ -178,13 +178,13 @@ export const EmagrecimentoPage: React.FC = () => {
           </div>
 
           {/* Bloco Editorial: Ciência da Dieta Anti-inflamatória */}
-          <div className="mt-14 grid gap-8 items-center rounded-3xl border border-brand-surface bg-slate-50 p-6 sm:p-10 lg:grid-cols-12">
-            <div className="lg:col-span-5">
-              <div className="overflow-hidden rounded-2xl shadow-md">
+          <div className="mt-14 grid gap-8 items-center lg:items-stretch rounded-3xl border border-brand-surface bg-slate-50 p-6 sm:p-10 lg:grid-cols-12">
+            <div className="lg:col-span-5 flex">
+              <div className="overflow-hidden rounded-2xl shadow-md w-full h-72 sm:h-80 lg:h-full">
                 <img
                   src="/brand/nutricao-metabolismo.jpg"
-                  alt="Mesa clínica do Dr. Cristiano Miranda com estetoscópio"
-                  className="h-64 w-full object-cover sm:h-72"
+                  alt="Vitalidade, disposição e preservação muscular"
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
             </div>
