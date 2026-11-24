@@ -53,10 +53,10 @@ export const EmagrecimentoPage: React.FC = () => {
         <div className="absolute inset-0">
           <img
             src="/brand/consultorio-integrativo.jpg"
-            alt="Consultório de Cardiologia Esportiva e Medicina Integrativa"
-            className="h-full w-full object-cover object-[65%_82%] opacity-60"
+            alt="Consultório do Dr. Cristiano Miranda em Belo Horizonte"
+            className="h-full w-full object-cover object-center opacity-55"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 lg:via-brand-navy/80 to-brand-navy/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/92 lg:via-brand-navy/82 to-brand-navy/25" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-brand-navy/35" />
         </div>
 
@@ -183,7 +183,7 @@ export const EmagrecimentoPage: React.FC = () => {
               <div className="overflow-hidden rounded-2xl shadow-md">
                 <img
                   src="/brand/nutricao-metabolismo.jpg"
-                  alt="Nutrição anti-inflamatória e saúde metabólica"
+                  alt="Mesa clínica do Dr. Cristiano Miranda com estetoscópio"
                   className="h-64 w-full object-cover sm:h-72"
                 />
               </div>
